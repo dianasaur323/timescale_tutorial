@@ -13,4 +13,8 @@ Run through the setup instructions [here](https://docs.timescale.com/v0.12/getti
 
 Connect to your database and run `\dx` to confirm that TimescaleDB was properly installed as an extension.
 
-## Lab: Inserting data into TimescaleDB  
+### Download the sample dataset
+
+We will be using the taxi trip record data set provided by NYC Gov, available [here](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+
+Please download the YELLOW dataset for 2018 from January to June.
