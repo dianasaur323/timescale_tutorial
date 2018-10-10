@@ -22,4 +22,5 @@ Use the SQL instructions provided in [part_1.sql](https://github.com/dianasaur32
 ## Manually set chunk_size
 
 SELECT * FROM chunk_relation_size_pretty('taxi_data');
+
 SELECT set_chunk_time_interval('taxi_data', interval '24 hours');
