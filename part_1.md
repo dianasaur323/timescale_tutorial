@@ -15,9 +15,13 @@ Connect to your database and run `\dx` to confirm that TimescaleDB was properly 
 
 We will be using the taxi trip record data set provided by NYC Gov, available [here](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
 
+The data has been formatted for your easy consumption in the git repository, so you can choose to download the relevant files there.
+
+For this exercise, please download the January data set.
+
 Please download the YELLOW dataset for 2018 from January to March.
 
-Use the SQL instructions provided in part_1.sql to load the CSV file.
+Use the SQL instructions provided in [part_1.sql](https://github.com/dianasaur323/timescale_tutorial/blob/master/part_1.sql) to load the CSV file.
 
 ## Configure PostgreSQL
 
