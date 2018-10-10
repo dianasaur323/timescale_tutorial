@@ -15,4 +15,17 @@ Connect to your database and run `\dx` to confirm that TimescaleDB was properly 
 
 We will be using the taxi trip record data set provided by NYC Gov, available [here](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
 
-Please download the YELLOW dataset for 2018 from January to June.
+Please download the YELLOW dataset for 2018 from January to March.
+
+Use the SQL instructions provided in part_1.sql to load the CSV file.
+
+## Configure PostgreSQL
+
+Go to the [PgTune](https://pgtune.leopard.in.ua/#/) website and get the suggested configs for your machine using the Data Warehouse DB Type.
+
+Update the configurations in your postgres.conf file. The default location is usually /usr/local/var/postgres/postgresql.conf.
+
+## Manually set chunk_size
+
+SELECT * FROM chunk_relation_size_pretty('taxi_data');
+SELECT set_chunk_time_interval('taxi_data', interval '24 hours');
