@@ -28,5 +28,6 @@ SELECT create_hypertable('taxi_data', 'tpep_pickup_datetime');
 \copy taxi_data FROM '/Users/dianasaur/Downloads/yellow_tripdata_2018-01.csv' WITH (FORMAT CSV, DELIMITER ',', HEADER);
 
 -- If you get this error (ERROR:  unquoted carriage return found in data), run the following command on your file. It may take several minutes.
-vi yellow_trip_data_2018-01.csv
+vi yellow_tripdata_2018-01.csv
 :%s/\r//g
+esc :wq
