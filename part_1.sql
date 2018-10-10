@@ -24,11 +24,8 @@ CREATE TABLE taxi_data(
 
 SELECT create_hypertable('taxi_data', 'tpep_pickup_datetime');
 
--- Copy January data in, changing the path and file name if necessary.
-\copy taxi_data FROM '/Users/dianasaur/Downloads/yellow_tripdata_2018-01.csv' WITH (FORMAT CSV, DELIMITER ',', HEADER);
+-- Unzip the jan_1.tar.gz file
+tar xopf jan_1.tar.gz
 
--- If you get this error (ERROR:  unquoted carriage return found in data), run the following command on your file. It may take several minutes.
-vi yellow_tripdata_2018-01.csv
-:%s/\r//g
-delete the empty row
-esc :wq
+-- Run the following command in the psql interface
+\copy taxi_data FROM '/Users/dianasaur/Projects/timescale_tutorial/jan_1.csv' WITH (FORMAT CSV, HEADER);
