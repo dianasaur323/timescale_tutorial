@@ -24,3 +24,9 @@ Use the SQL instructions provided in [part_1.sql](https://github.com/dianasaur32
 SELECT * FROM chunk_relation_size_pretty('taxi_data');
 
 SELECT set_chunk_time_interval('taxi_data', interval '24 hours');
+
+tar xopf jan_2.tar.gz
+
+\copy taxi_data FROM '/Users/dianasaur/Projects/timescale_tutorial/jan_2.csv' WITH (FORMAT CSV, HEADER);
+
+SELECT * FROM chunk_relation_size_pretty('taxi_data');

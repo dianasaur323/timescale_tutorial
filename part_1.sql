@@ -29,3 +29,6 @@ tar xopf jan_1.tar.gz
 
 -- Run the following command in the psql interface
 \copy taxi_data FROM '/Users/dianasaur/Projects/timescale_tutorial/jan_1.csv' WITH (FORMAT CSV, HEADER);
+
+-- Your data is loaded! Try running
+SELECT * FROM taxi_data LIMIT 1;
